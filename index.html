@@ -1,0 +1,383 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="description"
+        content="PEAR: PIXEL-ALIGNED EXPRESSIVE HUMAN MESH RECOVERY">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>PEAR</title>
+<!-- : Pixel-aligned Expressive humAn mesh Recovery -->
+  <!-- Global site tag (gtag.js) - Google Analytics -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-PYVRSFMDRL"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+
+    function gtag() {
+      dataLayer.push(arguments);
+    }
+
+    gtag('js', new Date());
+
+    gtag('config', 'G-PYVRSFMDRL');
+  </script>
+
+  <link href="https://fonts.googleapis.com/css?family=Google+Sans|Noto+Sans|Castoro"
+        rel="stylesheet">
+
+  <link rel="stylesheet" href="./static/css/bulma.min.css">
+  <link rel="stylesheet" href="./static/css/bulma-carousel.min.css">
+  <link rel="stylesheet" href="./static/css/bulma-slider.min.css">
+  <link rel="stylesheet" href="./static/css/fontawesome.all.min.css">
+  <link rel="stylesheet"
+        href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css">
+  <link rel="stylesheet" href="./static/css/index.css">
+  <link rel="icon" href="./static/images/iclr-navbar-logo.svg">
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script defer src="./static/js/fontawesome.all.min.js"></script>
+  <script src="./static/js/bulma-carousel.min.js"></script>
+  <script src="./static/js/bulma-slider.min.js"></script>
+  <script src="./static/js/index.js"></script>
+</head>
+<body>
+
+<nav class="navbar" role="navigation" aria-label="main navigation">
+  <div class="navbar-brand">
+    <a role="button" class="navbar-burger" aria-label="menu" aria-expanded="false">
+      <span aria-hidden="true"></span>
+      <span aria-hidden="true"></span>
+      <span aria-hidden="true"></span>
+    </a>
+  </div>
+  <div class="navbar-menu">
+    <div class="navbar-start" style="flex-grow: 1; justify-content: center;">
+      <span class="icon">
+          <i class="fas fa-home"></i>
+      </span>
+      </a>
+    </div>
+
+  </div>
+</nav>
+
+
+<section class="hero">
+  <div class="hero-body">
+    <div class="container is-max-desktop">
+      <div class="columns is-centered">
+        <div class="column has-text-centered">
+          <h1 class="title is-1 publication-title">PEAR: Pixel-aligned Expressive humAn mesh Recovery</h1>
+          <div class="is-size-5 publication-authors">
+            <span class="author-block">
+              <a>Anonymous authors</a><sup></sup></span> 
+          </div>
+
+          <div class="column has-text-centered">
+
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+
+
+
+<section class="section">
+  <div class="container is-max-desktop">
+    <!-- Abstract. -->
+    <div class="columns is-centered has-text-centered">
+      <div class="column is-four-fifths">
+        <!-- <h2 class="title is-3">Video</h2> -->
+        <div class="publication-video">
+      <img src="static\images\image.png" alt="Extracted image from PDF" style="width: 100%; max-width: 1000px;">
+        </div>
+        <!-- <video controls playsinline style="width: 100%; height: auto;">
+          <source src="static/ourvideos/output.mp4" type="video/mp4">
+        </video> -->
+      </div>
+    </div>
+  
+      <!-- Method -->
+  <div class="container" style="max-width: 1500px; margin: 40px auto 0 auto;">
+    <div class="has-text-centered">
+      <h2 class="title is-3">Method overview</h2>
+      <div class="columns is-centered has-text-centered">
+        <div class="column is-four-fifths">
+          <div class="publication-video">
+            <img src="static/images/method.png" alt="Extracted image from PDF" style="width: 150%; max-width: 750px;">
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+    <div class="columns is-centered has-text-centered">
+      <div class="column is-four-fifths">
+        <h2 class="title is-3">Abstract</h2>
+        <div class="content has-text-justified">
+          <p>
+Reconstructing 3D human meshes from a single in-the-wild image remains a fundamental challenge in computer vision. Existing methods often produce coarse body poses and exhibit misalignments and unnatural artifacts in fine-grained regions such as the face and hands, which can progressively accumulate and lead to significant errors in downstream tasks.  
+To address this issue, we propose PEAR—a unified framework for human mesh recovery and rendering. PEAR ~explicitly tackles two major limitations of current methods: inaccurate localization of fine-grained human pose details and insufficient photometric supervision for self-reconstruction.
+Specifically, we train a Transformer-based model that can recover expressive 3D human geometry (SMPLX + FLAME) from a single image without cropping specific body parts. This preprocessing-free design enables real-time inference at over 100 FPS. Furthermore, we integrate the model with a neural renderer to jointly optimize geometry and appearance, which significantly enhances the reconstruction accuracy of fine-grained human geometry and yields higher-quality rendering results.
+Lastly, we curate a large-scale dataset of images and videos with human pose and keypoint annotations to facilitate model training.  Extensive experiments on multiple benchmark datasets demonstrate that the proposed approach achieves significant improvements in both geometric reconstruction accuracy and rendering quality.
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<div class="container" style="max-width: 1200px; margin: 80px auto 0 auto;">
+  <div class="has-text-centered">
+    <h2 class="title is-3">Head mesh recovery</h2>
+    <p class="mb-5">
+      Our approach attains highly detailed facial alignment, enabling the capture of more nuanced expressions.
+    </p>
+
+<div class="container">
+  <div class="columns is-centered is-multiline">
+
+    <!-- 第一行 -->
+    <div class="column is-half has-text-centered">
+      <video controls playsinline style="width: 100%; height: auto;">
+        <source src="static/videos/Head_OSX.mp4" type="video/mp4">
+      </video>
+      <p class="mt-2 has-text-weight-semibold">OSX</p>
+    </div>
+    <div class="column is-half has-text-centered">
+      <video controls playsinline style="width: 100%; height: auto;">
+        <source src="static/videos/Head_SMPLest.mp4" type="video/mp4">
+      </video>
+      <p class="mt-2 has-text-weight-semibold">SMPLest</p>
+    </div>
+
+  <!-- 第二行 -->
+  <div class="column is-half has-text-centered">
+    <img src="static/videos/Head_MultiHMR_Failure.png" 
+        alt="Multi-HMR" 
+        style="width: 100%; height: auto;">
+    <p class="mt-2 has-text-weight-semibold">Multi-HMR (failed)</p>
+  </div>
+
+  <div class="column is-half has-text-centered">
+    <video controls playsinline style="width: 100%; height: auto;">
+      <source src="static/videos/Head_PEAR(Ours).mp4" type="video/mp4">
+    </video>
+    <p class="mt-2 has-text-weight-semibold">Ours</p>
+  </div>
+
+
+  </div>
+</div>
+
+
+    
+  </div>
+</div>
+
+
+
+<div class="container" style="max-width: 1200px; margin: 80px auto 0 auto;">
+  <div class="has-text-centered">
+    <h2 class="title is-3">Ubody mesh recovery</h2>
+    <p class="mb-5">
+      Our method achieves more accurate alignment with actual motion in both the face and hands.
+    </p>  
+<div class="container">
+  <div class="columns is-centered is-multiline">
+
+    <!-- 第一行 -->
+    <div class="column is-half has-text-centered">
+      <video controls playsinline style="width: 100%; height: auto;">
+        <source src="static/videos/UBody_OSX.mp4" type="video/mp4">
+      </video>
+      <p class="mt-2 has-text-weight-semibold">OSX</p>
+    </div>
+    <div class="column is-half has-text-centered">
+      <video controls playsinline style="width: 100%; height: auto;">
+        <source src="static/videos/UBody_SMPlest.mp4" type="video/mp4">
+      </video>
+      <p class="mt-2 has-text-weight-semibold">SMPLest</p>
+    </div>
+
+    <!-- 第二行 -->
+    <div class="column is-half has-text-centered">
+      <video controls playsinline style="width: 100%; height: auto;">
+        <source src="static/videos/UBody_MultiHMR.mp4" type="video/mp4">
+      </video>
+      <p class="mt-2 has-text-weight-semibold">Multi-HMR</p>
+    </div>
+    <div class="column is-half has-text-centered">
+      <video controls playsinline style="width: 100%; height: auto;">
+        <source src="static/videos/UBody_PEAR(Ours).mp4" type="video/mp4">
+      </video>
+      <p class="mt-2 has-text-weight-semibold">Ours</p>
+    </div>
+
+  </div>
+</div>
+
+
+    
+  </div>
+</div>
+
+
+
+
+
+
+<div class="container" style="max-width: 1200px; margin: 80px auto 0 auto;">
+  <div class="has-text-centered">
+    <h2 class="title is-3">WholeBody mesh recovery</h2>
+
+    <p class="mb-5">
+      Our method achieves finer pixel-level alignment across the entire human motion, rather than exhibiting the large offsets seen in other approaches.
+    </p>
+
+<div class="container">
+  <div class="columns is-centered is-multiline">
+
+    <!-- 第一行 -->
+    <div class="column is-half has-text-centered">
+      <video controls playsinline style="width: 100%; height: auto;">
+        <source src="static/videos/WholeBody_OSX.mp4" type="video/mp4">
+      </video>
+      <p class="mt-2 has-text-weight-semibold">OSX</p>
+    </div>
+    <div class="column is-half has-text-centered">
+      <video controls playsinline style="width: 100%; height: auto;">
+        <source src="static/videos/WholeBody_SMPlest.mp4" type="video/mp4">
+      </video>
+      <p class="mt-2 has-text-weight-semibold">SMPLest</p>
+    </div>
+
+    <!-- 第二行 -->
+    <div class="column is-half has-text-centered">
+      <video controls playsinline style="width: 100%; height: auto;">
+        <source src="static/videos/WholeBody_MultiHMR.mp4" type="video/mp4">
+      </video>
+      <p class="mt-2 has-text-weight-semibold">Multi-HMR</p>
+    </div>
+    <div class="column is-half has-text-centered">
+      <video controls playsinline style="width: 100%; height: auto;">
+        <source src="static/videos/WholeBody_PEAR(Ours).mp4" type="video/mp4">
+      </video>
+      <p class="mt-2 has-text-weight-semibold">Ours</p>
+    </div>
+
+  </div>
+</div>
+
+
+    
+  </div>
+</div>
+
+
+
+<!-- <div class="container" style="max-width: 1200px; margin: 80px auto 0 auto;">
+  <div class="has-text-centered">
+    <h2 class="title is-3">ByProduct</h2>
+
+    <p class="mb-5">
+      A by-product of our method enables 50 FPS animation: given a source image and a target video, our model can generate the motion sequence of the person in the source image corresponding to the target video at 50FPS, without any additional operations.
+    </p>
+
+    <div class="columns is-centered">
+      <div class="column is-full has-text-centered">
+        <video controls playsinline style="width: 100%; max-width: 1200px; height: auto;">
+          <source src="static/videos/Animation.mp4" type="video/mp4">
+        </video>
+        <p class="mt-2 has-text-weight-semibold">Ours</p>
+      </div>
+    </div>
+
+  </div>
+</div> -->
+
+
+<div class="container" style="max-width: 1200px; margin: 80px auto 0 auto;">
+  <div class="has-text-centered">
+    <h2 class="title is-3">Downstream application</h2>
+
+  <p class="mb-5">
+    Benefiting from <span style="color:red; font-weight:600;">PEAR’s fast inference speed (100 FPS)</span>, 
+    the system functions as a <span style="color:red; font-weight:600;">real-time animation interface</span>, 
+    estimating <span style="color:red; font-weight:600;">SMPL-X and FLAME parameters</span> from video streams 
+    and driving animations at <span style="color:red; font-weight:600;">50 FPS</span>.
+  </p>
+
+
+    <div class="columns is-centered">
+      <div class="column is-full has-text-centered">
+        <video controls playsinline style="width: 90%; max-width: 1200px; height: auto;">
+          <source src="static/videos/Realtime_animation.mp4" type="video/mp4">
+        </video>
+        <p class="mt-2 has-text-weight-semibold">Realtime Animation.</p>
+      </div>
+    </div>
+
+    <div class="columns is-centered">
+      <div class="column is-full has-text-centered">
+        <video controls playsinline style="width: 90%; max-width: 1200px; height: auto;">
+          <source src="static/videos/Animation.mp4" type="video/mp4">
+        </video>
+        <p class="mt-2 has-text-weight-semibold">Drive a wider variety of identities</p>
+      </div>
+    </div>
+
+    <div class="columns is-centered">
+      <div class="column is-full has-text-centered">
+        <video controls playsinline style="width: 90%; max-width: 1200px; height: auto;">
+          <source src="static/videos/Cartoon_animation.mp4" type="video/mp4">
+        </video>
+        <p class="mt-2 has-text-weight-semibold">Cartoon Animation</p>
+      </div>
+    </div>
+
+  </div>
+</div>
+
+
+<!-- Extreme Cases -->
+<!-- Extreme Cases -->
+<div class="container" style="max-width: 1500px; margin: 40px auto 0 auto;">
+  <div class="has-text-centered">
+    <h2 class="title is-3">Some extreme cases</h2>
+    <p class="mb-5">
+      We showcase several extreme cases, such as motion blur, occlusions, strong illumination, as well as loose clothing and long hair.
+    </p>
+
+    <div class="columns is-centered">
+      <div class="column is-full has-text-centered">
+        <video controls playsinline style="width: 60%; max-width: 700px; height: auto;">
+          <source src="static/videos/loose_clothing_hair.mp4" type="video/mp4">
+        </video>
+        <p class="mt-2 has-text-weight-semibold">Loose clothing and hair</p>
+      </div>
+    </div>
+    <div class="columns is-centered has-text-centered">
+      <div class="column is-four-fifths">
+        <div class="publication-video">
+          <img src="static/images/extreme_case.png" alt="Extracted image from PDF" style="width: 150%; max-width: 750px;">
+        </div>
+      </div>
+    </div>
+
+  </div>
+</div>
+
+
+
+
+
+
+
+
+</body>
+</html>
