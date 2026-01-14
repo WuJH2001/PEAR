@@ -1,0 +1,714 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="description"
+        content="PEAR: PIXEL-ALIGNED EXPRESSIVE HUMAN MESH RECOVERY">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>PEAR</title>
+<!-- : Pixel-aligned Expressive humAn mesh Recovery -->
+  <!-- Global site tag (gtag.js) - Google Analytics -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-PYVRSFMDRL"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+
+    function gtag() {
+      dataLayer.push(arguments);
+    }
+
+    gtag('js', new Date());
+
+    gtag('config', 'G-PYVRSFMDRL');
+  </script>
+
+  <link href="https://fonts.googleapis.com/css?family=Google+Sans|Noto+Sans|Castoro"
+        rel="stylesheet">
+
+  <link rel="stylesheet" href="./static/css/bulma.min.css">
+  <link rel="stylesheet" href="./static/css/bulma-carousel.min.css">
+  <link rel="stylesheet" href="./static/css/bulma-slider.min.css">
+  <link rel="stylesheet" href="./static/css/fontawesome.all.min.css">
+  <link rel="stylesheet"
+        href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css">
+  <link rel="stylesheet" href="./static/css/index.css">
+  <!-- <link rel="icon" href="./static/images/iclr-navbar-logo.svg"> -->
+  <link rel="icon" href="./static/images/icons2.png">
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script defer src="./static/js/fontawesome.all.min.js"></script>
+  <script src="./static/js/bulma-carousel.min.js"></script>
+  <script src="./static/js/bulma-slider.min.js"></script>
+  <script src="./static/js/index.js"></script>
+  <script src="./static/js/video-carousel.js"></script>
+</head>
+<body>
+
+<nav class="navbar" role="navigation" aria-label="main navigation">
+  <div class="navbar-brand">
+    <a role="button" class="navbar-burger" aria-label="menu" aria-expanded="false">
+      <span aria-hidden="true"></span>
+      <span aria-hidden="true"></span>
+      <span aria-hidden="true"></span>
+    </a>
+  </div>
+  <div class="navbar-menu">
+    <div class="navbar-start" style="flex-grow: 1; justify-content: center;">
+      <span class="icon">
+          <i class="fas fa-home"></i>
+      </span>
+      </a>
+    </div>
+
+  </div>
+</nav>
+
+
+<section class="hero">
+  <div class="hero-body">
+    <div class="container is-max-desktop">
+      <div class="columns is-centered">
+        <div class="column has-text-centered">
+        <h1 class="title is-1 publication-title">
+          <span class="icon">🍐</span>
+          <span class="pear-logo">PEAR</span>
+          :Pixel-aligned Expressive humAn mesh Recovery
+        </h1>
+
+
+
+        <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@600;700&display=swap" rel="stylesheet">
+
+          <div class="is-size-5 publication-authors">
+            <span class="author-block">
+              <a href="https://openreview.net/profile?id=%7EJiahao_Wu11">Jiahao Wu</a></sup>,</span> 
+            <span class="author-block">
+              <a href="http://liuyunfei.net/">Yunfei Liu ✉</a></sup>,</span>
+            <span class="author-block">
+              <a href="https://scholar.google.com.hk/citations?user=Xf5_TfcAAAAJ&hl=zh-CN">Lijian Lin</a></sup>,
+            </span>
+            <span class="author-block">
+              <a>Ye Zhu</a></sup>,
+            </span>
+            <span class="author-block">
+              <a> Lei Zhu</a></sup>,
+            </span>
+            <span class="author-block">
+              <a>Jingyi Li</a></sup>,
+            </span>
+            <span class="author-block">
+              <a href="https://yu-li.github.io/"> Yu Li</a>
+            </span>
+          </div>
+
+          <div class="is-size-5 publication-authors">
+            <span class="author-block"></sup>International Digital Economy Academy (IDEA)</span>
+          </div>
+
+          <div class="column has-text-centered">
+            <div class="publication-links">
+              <!-- PDF Link. -->
+              <span class="link-block">
+                <a 
+                   class="external-link button is-normal is-rounded is-dark">
+                  <span class="icon">
+                      <i class="fas fa-file-pdf"></i>
+                  </span>
+                  <span>Paper</span>
+                </a>
+              </span>
+              <!-- Code Link. -->
+              <span class="link-block">
+                <a 
+                   class="external-link button is-normal is-rounded is-dark">
+                  <span class="icon">
+                      <i class="fab fa-github"></i>
+                  </span>
+                  <span>Code</span>
+                  </a>
+              </span>
+              <!-- Dataset Link. -->
+              <span class="link-block">
+                <a
+                   class="external-link button is-normal is-rounded is-dark">
+                  <span class="icon">
+                      <i class="far fa-images"></i>
+                  </span>
+                  <span>Dataset</span>
+                  </a>
+          </div>
+
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+
+
+
+<section class="section">
+  <div class="container is-max-desktop">
+    <!-- Abstract. -->
+    <div class="columns is-centered has-text-centered">
+      <div class="column is-four-fifths">
+        <!-- <h2 class="title is-3">Video</h2> -->
+    <figure class="publication-teaser">
+      <img src="static/images/teaser.png"
+          alt="PEAR teaser image"
+          class="teaser-img">
+
+      <figcaption class="teaser-caption">
+        <strong>Figure 1:</strong>
+          We propose PEAR, which achieves pixel-level alignment over previous human mesh recovery methods and demonstrates stronger generalization. It captures more accurate facial details, adapts to diverse inputs, and performs pose recovery within 0.01s from a single image without body-part cropping, providing significant convenience for downstream real-time animation tasks.
+      </figcaption>
+    </figure>
+
+        <!-- <video controls playsinline style="width: 100%; height: auto;">
+          <source src="static/ourvideos/output.mp4" type="video/mp4">
+        </video> -->
+
+      </div>
+    </div>
+          <!-- Method -->
+  <figure class="publication-teaser">
+      <img src="static/images/method.png"
+          alt="PEAR pipeline image"
+          class="teaser-img">
+
+      <figcaption class="teaser-caption">
+        <strong>Figure 2:</strong>
+        PEAR is trained in two stages. In the first stage, we use single-frame
+        images (employing only the target flow) to train a ViT-based architecture for estimating EHM
+        parameters, including SMPLX body and FLAME head parameters. In the second stage, we use
+        image pairs (from video datasets) as training units and incorporate a neural renderer to provide
+        photometric supervision, thereby enabling joint training of the two modules and enhancing human
+        detail reconstruction and rendering quality.
+      </figcaption>
+    </figure>
+
+
+
+
+    <div class="columns is-centered has-text-centered">
+      <div class="column is-four-fifths">
+        <h2 class="title is-3">Abstract</h2>
+        <div class="content has-text-justified">
+          <p>
+          Reconstructing detailed 3D human meshes from a single in-the-wild image remains a fundamental challenge in computer vision. Existing methods often suffer from slow inference, produce only coarse body poses, and exhibit misalignments or unnatural artifacts in fine-grained regions such as the face and hands. These issues make current approaches difficult to apply to downstream tasks.
+          To address these challenges, we propose PEAR—a unified framework for human mesh recovery and rendering. PEAR explicitly tackles three major limitations of existing methods: slow inference, inaccurate localization of fine-grained human pose details, and insufficient photometric supervision during self-reconstruction.
+          Specifically, we train a clean, unified ViT-based model capable of recovering expressive 3D human geometry (SMPLX + FLAME) from a single image without cropping any specific body parts. This preprocessing-free design enables real-time inference at over 100 FPS.
+          In addition, we integrate the model with a neural renderer to jointly optimize geometry and appearance, significantly improving the reconstruction accuracy of fine-grained human geometry and producing higher-quality rendering results. Finally, we propose a modular data annotation strategy that enriches the training data and enhances the robustness of the model.  Extensive experiments on multiple benchmark datasets demonstrate that our approach achieves substantial improvements in both geometric reconstruction accuracy and rendering quality.
+          </p>
+        </div>
+      </div>
+    </div>
+
+    <div class="columns is-centered has-text-centered">
+      <div class="column is-four-fifths">
+        <h2 class="title is-3">TL;DR</h2>
+        <div class="content has-text-justified">
+        <p class="hero-text">
+          We propose <span class="hl">PEAR</span>, a unified framework for
+          <span class="hl-strong">real-time</span> expressive 3D human mesh recovery.
+          It is the first method capable of simultaneously predicting
+          <span class="hl">SMPL-X</span> and <span class="hl">FLAME</span> parameters at
+          <span class="hl-strong">100 FPS</span>,
+          and it exhibits strong robustness to diverse human-part image inputs,
+          accurately handling face-only, upper-body, and full-body images.
+        </p>
+
+        </div>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+
+
+
+
+
+
+
+
+
+
+<div class="slider-container">
+  <button class="slider-btn left-btn" onclick="slide(-1)">❰</button>
+
+  <div class="video-slider" id="videoSlider">
+
+    <div class="video-slide">
+      <video controls playsinline>
+        <source src="static/videos/head_demo1_post.mp4" type="video/mp4">
+      </video>
+      <p>Facial expression capture example</p>
+    </div>
+
+    <div class="video-slide">
+      <video controls playsinline>
+        <source src="static/videos/side0.mp4" type="video/mp4">
+      </video>
+      <p>Body pose capture example 1</p>
+    </div>
+
+    <div class="video-slide">
+      <video controls playsinline>
+        <source src="static/videos/side1.mp4" type="video/mp4">
+      </video>
+      <p>Body pose capture example 2</p>
+    </div>
+
+    <div class="video-slide">
+      <video controls playsinline>
+        <source src="static/videos/cam4.mp4" type="video/mp4">
+      </video>
+      <p>Body pose capture example 3</p>
+    </div>
+
+    <div class="video-slide">
+      <video controls playsinline>
+        <source src="static/videos/cam9.mp4" type="video/mp4">
+      </video>
+      <p>Body pose capture example 4</p>
+    </div>
+
+    <div class="video-slide">
+      <video controls playsinline>
+        <source src="static/videos/cam1.mp4" type="video/mp4">
+      </video>
+      <p>Body pose capture example 5</p>
+    </div>
+
+    <div class="video-slide">
+      <video controls playsinline>
+        <source src="static/videos/cam3.mp4" type="video/mp4">
+      </video>
+      <p>Body pose capture example 6</p>
+    </div>
+  </div>
+
+  <button class="slider-btn right-btn" onclick="slide(1)">❱</button>
+</div>
+
+
+<style>
+/* 容器 */
+.slider-container {
+  position: relative;
+  max-width: 960px;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+}
+
+/* 左右按钮 */
+.slider-btn {
+  background-color: rgba(0,0,0,0.5);
+  color: white;
+  border: none;
+  font-size: 2rem;
+  padding: 0 12px;
+  cursor: pointer;
+  border-radius: 10px;
+  z-index: 100;
+  user-select: none;
+
+  height: 60px;
+}
+
+
+.left-btn { margin-right: 10px; }
+.right-btn { margin-left: 10px; }
+
+/* 滑动区域 */
+.video-slider {
+  display: flex;
+  overflow: hidden;
+  width: 100%;
+  scroll-behavior: smooth;
+}
+
+/* 每个视频占满整个容器宽度 */
+.video-slide {
+  flex: 0 0 100%;
+  text-align: center;
+}
+
+.video-slide video {
+  width: 80%;
+  max-width: 900px;
+  border-radius: 12px;
+}
+
+.video-slide p {
+  margin-top: 0px;
+  font-weight: 600;
+}
+</style>
+
+<script>
+let currentIndex = 0;
+
+function slide(direction) {
+    const slider = document.getElementById("videoSlider");
+    const slides = slider.children;
+    const total = slides.length;
+
+    // 暂停当前播放的视频
+    const currentVideo = slides[currentIndex].querySelector("video");
+    if (currentVideo) currentVideo.pause();
+
+    // 更新索引，实现循环
+    currentIndex += direction;
+    if (currentIndex < 0) {
+        currentIndex = total - 1;  // 左边循环到最后
+    }
+    if (currentIndex >= total) {
+        currentIndex = 0;          // 右边循环到第一个
+    }
+
+    // 容器横向滚动到对应视频
+    const slideWidth = slides[0].offsetWidth + parseInt(getComputedStyle(slides[0]).marginRight);
+    slider.scrollTo({
+        left: currentIndex * slideWidth,
+        behavior: 'smooth'
+    });
+
+    // 自动播放新视频（可选）
+    const nextVideo = slides[currentIndex].querySelector("video");
+    if (nextVideo) nextVideo.play();
+}
+</script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div class="container" style="max-width: 1200px; margin: 80px auto 0 auto;">
+  <div class="has-text-centered">
+    
+    <h2 class="title is-3">PEAR  <span style="color:red; font-weight:600;">VS</span> SAM3D</h2>
+    <p class="mb-5">
+      PEAR's fine-grained body pose estimation for the upper body is more accurate than SAM3D's, resulting in an estimated human mesh that is more pixel-aligned. 
+      Most importantly, PEAR boasts an inference speed 100x faster than SAM3D, which supports real-time processing/inference. 
+    </p>
+
+    <div class="container py-3"> 
+      
+      <div class="columns is-centered is-multiline"> 
+
+      <div class="column is-half has-text-centered">
+          <img src="static/videos/sam3d.png" 
+              alt="Multi-HMR" 
+              style="width: auto; height: 98%;">
+      </div>
+
+
+      <div class="column is-half has-text-centered">
+          <img src="static/videos/pear.png" 
+              alt="Multi-HMR" 
+              style="width: 100%; height: auto;">
+      </div>
+
+
+      <div class="column is-half has-text-centered pt-0 mt-0">
+          <video controls playsinline style="width: 100%; height: auto;">
+              <source src="static/videos/UBody_sam3d.mp4" type="video/mp4">
+          </video>
+          <p class="mt-2 has-text-weight-semibold">SAM3D-Body</p> 
+      </div>
+
+      <div class="column is-half has-text-centered pt-0 mt-0">
+          <video controls playsinline style="width: 100%; height: auto;">
+              <source src="static/videos/UBody_PEAR(Ours).mp4" type="video/mp4">
+          </video>
+          <p class="mt-2 has-text-weight-semibold">Ours</p>
+      </div>
+
+      </div>
+    </div>
+    
+  </div>
+</div>
+
+
+
+
+<<<<<<< HEAD
+=======
+
+
+>>>>>>> cd0d8a3 (all)
+<div class="container" style="max-width: 1200px; margin: 80px auto 0 auto;">
+  <div class="has-text-centered">
+    <h2 class="title is-3">☺️ Head mesh recovery</h2>
+    <p class="mb-5">
+      Our approach attains highly detailed facial alignment, enabling the capture of more nuanced expressions.
+    </p>
+      <div class="container">
+        <div class="columns is-centered is-multiline">
+
+            <!-- 第一行 -->
+            <div class="column is-half has-text-centered">
+              <video controls playsinline style="width: 100%; height: auto;">
+                <source src="static/videos/Head_OSX.mp4" type="video/mp4">
+              </video>
+              <p class="mt-2 has-text-weight-semibold">OSX</p>
+            </div>
+            <div class="column is-half has-text-centered">
+              <video controls playsinline style="width: 100%; height: auto;">
+                <source src="static/videos/Head_SMPLest.mp4" type="video/mp4">
+              </video>
+              <p class="mt-2 has-text-weight-semibold">SMPLest</p>
+            </div>
+
+          <!-- 第二行 -->
+          <div class="column is-half has-text-centered">
+            <img src="static/videos/Head_MultiHMR_Failure.png" 
+                alt="Multi-HMR" 
+                style="width: 100%; height: auto;">
+            <p class="mt-2 has-text-weight-semibold">Multi-HMR (failed)</p>
+          </div>
+
+          <div class="column is-half has-text-centered">
+            <video controls playsinline style="width: 100%; height: auto;">
+              <source src="static/videos/Head_PEAR(Ours).mp4" type="video/mp4">
+            </video>
+            <p class="mt-2 has-text-weight-semibold">Ours</p>
+          </div>
+        </div>
+      </div>
+
+
+
+
+    
+  </div>
+</div>
+
+
+
+<div class="container" style="max-width: 1200px; margin: 80px auto 0 auto;">
+  <div class="has-text-centered">
+    <h2 class="title is-3">🤷‍♂️ Ubody mesh recovery</h2>
+    <p class="mb-5">
+      Our method achieves more accurate alignment with actual motion in both the face and hands.
+    </p>  
+<div class="container">
+  <div class="columns is-centered is-multiline">
+
+    <!-- 第一行 -->
+    <div class="column is-half has-text-centered">
+      <video controls playsinline style="width: 100%; height: auto;">
+        <source src="static/videos/UBody_OSX.mp4" type="video/mp4">
+      </video>
+      <p class="mt-2 has-text-weight-semibold">OSX</p>
+    </div>
+    <div class="column is-half has-text-centered">
+      <video controls playsinline style="width: 100%; height: auto;">
+        <source src="static/videos/UBody_SMPlest.mp4" type="video/mp4">
+      </video>
+      <p class="mt-2 has-text-weight-semibold">SMPLest</p>
+    </div>
+
+    <!-- 第二行 -->
+    <div class="column is-half has-text-centered">
+      <video controls playsinline style="width: 100%; height: auto;">
+        <source src="static/videos/UBody_MultiHMR.mp4" type="video/mp4">
+      </video>
+      <p class="mt-2 has-text-weight-semibold">Multi-HMR</p>
+    </div>
+    <div class="column is-half has-text-centered">
+      <video controls playsinline style="width: 100%; height: auto;">
+        <source src="static/videos/UBody_PEAR(Ours).mp4" type="video/mp4">
+      </video>
+      <p class="mt-2 has-text-weight-semibold">Ours</p>
+    </div>
+
+  </div>
+</div>
+
+
+    
+  </div>
+</div>
+
+
+
+
+
+
+<div class="container" style="max-width: 1200px; margin: 80px auto 0 auto;">
+  <div class="has-text-centered">
+    <h2 class="title is-3">🏃WholeBody mesh recovery</h2>
+
+    <p class="mb-5">
+      Our method achieves finer pixel-level alignment across the entire human motion, rather than exhibiting the large offsets seen in other approaches.
+    </p>
+
+<div class="container">
+  <div class="columns is-centered is-multiline">
+
+    <!-- 第一行 -->
+    <div class="column is-half has-text-centered">
+      <video controls playsinline style="width: 100%; height: auto;">
+        <source src="static/videos/WholeBody_OSX.mp4" type="video/mp4">
+      </video>
+      <p class="mt-2 has-text-weight-semibold">OSX</p>
+    </div>
+    <div class="column is-half has-text-centered">
+      <video controls playsinline style="width: 100%; height: auto;">
+        <source src="static/videos/WholeBody_SMPlest.mp4" type="video/mp4">
+      </video>
+      <p class="mt-2 has-text-weight-semibold">SMPLest</p>
+    </div>
+
+    <!-- 第二行 -->
+    <div class="column is-half has-text-centered">
+      <video controls playsinline style="width: 100%; height: auto;">
+        <source src="static/videos/WholeBody_MultiHMR.mp4" type="video/mp4">
+      </video>
+      <p class="mt-2 has-text-weight-semibold">Multi-HMR</p>
+    </div>
+    <div class="column is-half has-text-centered">
+      <video controls playsinline style="width: 100%; height: auto;">
+        <source src="static/videos/WholeBody_PEAR(Ours).mp4" type="video/mp4">
+      </video>
+      <p class="mt-2 has-text-weight-semibold">Ours</p>
+    </div>
+
+  </div>
+</div>
+
+
+    
+  </div>
+</div>
+
+
+
+
+<div class="container" style="max-width: 1200px; margin: 80px auto 0 auto;">
+  <div class="has-text-centered">
+    <h2 class="title is-3">⚙️ Downstream application</h2>
+
+  <p class="mb-5">
+    Benefiting from <span style="color:red; font-weight:600;">PEAR’s fast inference speed (100 FPS)</span>, 
+    the system functions as a <span style="color:red; font-weight:600;">real-time animation interface</span>, 
+    estimating <span style="color:red; font-weight:600;">SMPL-X and FLAME parameters</span> from video streams 
+    and driving animations at <span style="color:red; font-weight:600;">50 FPS</span>.
+  </p>
+
+
+    <div class="columns is-centered">
+      <div class="column is-full has-text-centered">
+        <video controls playsinline style="width: 90%; max-width: 1200px; height: auto;">
+          <source src="static/videos/Realtime_animation.mp4" type="video/mp4">
+        </video>
+        <p class="mt-2 has-text-weight-semibold">Realtime Animation.</p>
+      </div>
+    </div>
+
+    <div class="columns is-centered">
+      <div class="column is-full has-text-centered">
+        <video controls playsinline style="width: 90%; max-width: 1200px; height: auto;">
+          <source src="static/videos/Animation.mp4" type="video/mp4">
+        </video>
+        <p class="mt-2 has-text-weight-semibold">Drive a wider variety of identities</p>
+      </div>
+    </div>
+
+
+  </div>
+</div>
+
+
+
+
+
+
+
+<!-- Extreme Cases -->
+<!-- Extreme Cases -->
+<div class="container" style="max-width: 1500px; margin: 40px auto 0 auto;">
+  <div class="has-text-centered">
+    <h2 class="title is-3">Some extreme cases</h2>
+    <p class="mb-5">
+      We showcase several extreme cases, such as motion blur, occlusions, strong illumination, as well as loose clothing and long hair.
+    </p>
+    <div class="columns is-centered has-text-centered">
+      <div class="column is-four-fifths">
+        <div class="publication-video">
+          <img src="static/images/extreme_case.png" alt="Extracted image from PDF" style="width: 150%; max-width: 750px;">
+        </div>
+      </div>
+    </div>
+
+  </div>
+</div>
+
+
+<!-- BibTeX Section -->
+<section class="section" id="BibTeX" style="padding-top: 5px; padding-bottom: 5px;">
+  <div class="container is-max-desktop content has-text-centered">
+    <h2 class="title">BibTeX</h2>
+    <div class="box" style="display: inline-block; text-align: left; max-width: 100%;">
+      <pre><code>@article{}
+</code></pre>
+    </div>
+  </div>
+</section>
+
+
+
+<footer class="footer">
+  <div class="container">
+    <div class="content has-text-centered">
+      <a class="icon-link"
+         href="./static/videos/nerfies_paper.pdf">
+        <i class="fas fa-file-pdf"></i>
+      </a>
+      <a class="icon-link" href="https://github.com/keunhong" class="external-link" disabled>
+        <i class="fab fa-github"></i>
+      </a>
+    </div>
+    <div class="columns is-centered">
+      <div class="column is-8">
+        <div class="content">
+          <p>
+            This website is licensed under a <a rel="license"
+                                                href="http://creativecommons.org/licenses/by-sa/4.0/">Creative
+            Commons Attribution-ShareAlike 4.0 International License</a>.
+          </p>
+          <p>
+            The souce code is borrowed from <a
+              href="https://github.com/nerfies/nerfies.github.io">nerfies</a> , we thank the authors for sharing the templates.
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</footer>
+
+
+</body>
+</html>
+
+
