@@ -54,9 +54,7 @@ body {
   -webkit-text-fill-color: transparent;
   letter-spacing: 0.1em;
 }
-<<<<<<< HEAD
 
-=======
 .gradient-text {
     background: var(--accent-gradient);
     -webkit-background-clip: text;
@@ -65,7 +63,7 @@ body {
     animation: shine 4s linear infinite;
     font-weight: 800;
 }
->>>>>>> cd0d8a3 (all)
+
 .publication-title {
     font-family: 'Google Sans', sans-serif;
 }

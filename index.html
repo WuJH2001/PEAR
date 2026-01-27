@@ -80,61 +80,7 @@
 
           <div class="is-size-5 publication-authors">
             <span class="author-block">
-              <a href="https://openreview.net/profile?id=%7EJiahao_Wu11">Jiahao Wu</a></sup>,</span> 
-            <span class="author-block">
-              <a href="http://liuyunfei.net/">Yunfei Liu ✉</a></sup>,</span>
-            <span class="author-block">
-              <a href="https://scholar.google.com.hk/citations?user=Xf5_TfcAAAAJ&hl=zh-CN">Lijian Lin</a></sup>,
-            </span>
-            <span class="author-block">
-              <a>Ye Zhu</a></sup>,
-            </span>
-            <span class="author-block">
-              <a> Lei Zhu</a></sup>,
-            </span>
-            <span class="author-block">
-              <a>Jingyi Li</a></sup>,
-            </span>
-            <span class="author-block">
-              <a href="https://yu-li.github.io/"> Yu Li</a>
-            </span>
-          </div>
-
-          <div class="is-size-5 publication-authors">
-            <span class="author-block"></sup>International Digital Economy Academy (IDEA)</span>
-          </div>
-
-          <div class="column has-text-centered">
-            <div class="publication-links">
-              <!-- PDF Link. -->
-              <span class="link-block">
-                <a 
-                   class="external-link button is-normal is-rounded is-dark">
-                  <span class="icon">
-                      <i class="fas fa-file-pdf"></i>
-                  </span>
-                  <span>Paper</span>
-                </a>
-              </span>
-              <!-- Code Link. -->
-              <span class="link-block">
-                <a 
-                   class="external-link button is-normal is-rounded is-dark">
-                  <span class="icon">
-                      <i class="fab fa-github"></i>
-                  </span>
-                  <span>Code</span>
-                  </a>
-              </span>
-              <!-- Dataset Link. -->
-              <span class="link-block">
-                <a
-                   class="external-link button is-normal is-rounded is-dark">
-                  <span class="icon">
-                      <i class="far fa-images"></i>
-                  </span>
-                  <span>Dataset</span>
-                  </a>
+              <a>Anonymous</a></sup></span> 
           </div>
 
         </div>
@@ -179,7 +125,7 @@
       <figcaption class="teaser-caption">
         <strong>Figure 2:</strong>
         PEAR is trained in two stages. In the first stage, we use single-frame
-        images (employing only the target flow) to train a ViT-based architecture for estimating EHM
+        images (employing only the target flow) to train a ViT-based architecture for estimating EHM-s
         parameters, including SMPLX body and FLAME head parameters. In the second stage, we use
         image pairs (from video datasets) as training units and incorporate a neural renderer to provide
         photometric supervision, thereby enabling joint training of the two modules and enhancing human
@@ -197,7 +143,7 @@
           <p>
           Reconstructing detailed 3D human meshes from a single in-the-wild image remains a fundamental challenge in computer vision. Existing methods often suffer from slow inference, produce only coarse body poses, and exhibit misalignments or unnatural artifacts in fine-grained regions such as the face and hands. These issues make current approaches difficult to apply to downstream tasks.
           To address these challenges, we propose PEAR—a unified framework for human mesh recovery and rendering. PEAR explicitly tackles three major limitations of existing methods: slow inference, inaccurate localization of fine-grained human pose details, and insufficient photometric supervision during self-reconstruction.
-          Specifically, we train a clean, unified ViT-based model capable of recovering expressive 3D human geometry (SMPLX + FLAME) from a single image without cropping any specific body parts. This preprocessing-free design enables real-time inference at over 100 FPS.
+          Specifically, we train a clean, unified ViT-based model capable of recovering expressive 3D human geometry (EHM-s) from a single image without cropping any specific body parts. This preprocessing-free design enables real-time inference at over 100 FPS.
           In addition, we integrate the model with a neural renderer to jointly optimize geometry and appearance, significantly improving the reconstruction accuracy of fine-grained human geometry and producing higher-quality rendering results. Finally, we propose a modular data annotation strategy that enriches the training data and enhances the robustness of the model.  Extensive experiments on multiple benchmark datasets demonstrate that our approach achieves substantial improvements in both geometric reconstruction accuracy and rendering quality.
           </p>
         </div>
@@ -212,7 +158,7 @@
           We propose <span class="hl">PEAR</span>, a unified framework for
           <span class="hl-strong">real-time</span> expressive 3D human mesh recovery.
           It is the first method capable of simultaneously predicting
-          <span class="hl">SMPL-X</span> and <span class="hl">FLAME</span> parameters at
+          EHM-s parameters at
           <span class="hl-strong">100 FPS</span>.
         </p>
 
@@ -242,14 +188,14 @@
       <video controls playsinline>
         <source src="static/videos/head_demo.mp4" type="video/mp4">
       </video>
-      <p>Facial expression capture example</p>
+      <p>Real-time facial expression capture with masked author identity</p>
     </div>
 
     <div class="video-slide">
       <video controls playsinline>
         <source src="static/videos/hand_demo.mp4" type="video/mp4">
       </video>
-      <p>Hand pose capture example</p>
+      <p>Real-time hand pose capture with masked author identity</p>
     </div>
 
     <div class="video-slide">
@@ -410,9 +356,20 @@ function slide(direction) {
 
 
 
+<div class="container" style="max-width: 1200px; margin: 80px auto 0 auto;">
+  <div class="has-text-centered">
 
+    <div class="columns is-centered">
+      <div class="column is-full has-text-centered">
+        <video controls playsinline style="width: 90%; max-width: 1200px; height: auto; border-radius: 16px;">
+          <source src="static/videos/PEAR.mp4" type="video/mp4">
+        </video>
+        <p class="mt-2 has-text-weight-semibold">Overview Video</p>
+      </div>
+    </div>
 
-
+  </div>
+</div> 
 
 
 
@@ -636,7 +593,7 @@ function slide(direction) {
     <div class="columns is-centered">
       <div class="column is-full has-text-centered">
         <video controls playsinline style="width: 90%; max-width: 1200px; height: auto;">
-          <source src="static/videos/Realtime_animation.mp4" type="video/mp4">
+          <source src="static/videos/Realtime_animations.mp4" type="video/mp4">
         </video>
         <p class="mt-2 has-text-weight-semibold">Realtime Animation.</p>
       </div>
@@ -658,11 +615,6 @@ function slide(direction) {
 
 
 
-
-
-
-<!-- Extreme Cases -->
-<!-- Extreme Cases -->
 <div class="container" style="max-width: 1500px; margin: 40px auto 0 auto;">
   <div class="has-text-centered">
     <h2 class="title is-3">Some extreme cases</h2>
@@ -680,48 +632,6 @@ function slide(direction) {
   </div>
 </div>
 
-
-<!-- BibTeX Section -->
-<section class="section" id="BibTeX" style="padding-top: 5px; padding-bottom: 5px;">
-  <div class="container is-max-desktop content has-text-centered">
-    <h2 class="title">BibTeX</h2>
-    <div class="box" style="display: inline-block; text-align: left; max-width: 100%;">
-      <pre><code>@article{}
-</code></pre>
-    </div>
-  </div>
-</section>
-
-
-
-<footer class="footer">
-  <div class="container">
-    <div class="content has-text-centered">
-      <a class="icon-link"
-         href="./static/videos/nerfies_paper.pdf">
-        <i class="fas fa-file-pdf"></i>
-      </a>
-      <a class="icon-link" href="https://github.com/keunhong" class="external-link" disabled>
-        <i class="fab fa-github"></i>
-      </a>
-    </div>
-    <div class="columns is-centered">
-      <div class="column is-8">
-        <div class="content">
-          <p>
-            This website is licensed under a <a rel="license"
-                                                href="http://creativecommons.org/licenses/by-sa/4.0/">Creative
-            Commons Attribution-ShareAlike 4.0 International License</a>.
-          </p>
-          <p>
-            The souce code is borrowed from <a
-              href="https://github.com/nerfies/nerfies.github.io">nerfies</a> , we thank the authors for sharing the templates.
-          </p>
-        </div>
-      </div>
-    </div>
-  </div>
-</footer>
 
 
 </body>
