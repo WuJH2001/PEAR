@@ -176,12 +176,7 @@
 
       <figcaption class="teaser-caption">
         <strong>Figure 2:</strong>
-        PEAR is trained in two stages. In the first stage, we use single-frame
-        images (employing only the target flow) to train a ViT-based architecture for estimating EHM-s
-        parameters, including SMPLX body and FLAME head parameters. In the second stage, we use
-        image pairs (from video datasets) as training units and incorporate a neural renderer to provide
-        photometric supervision, thereby enabling joint training of the two modules and enhancing human
-        detail reconstruction and rendering quality.
+ Overview of  PEAR.  PEAR adopts a unified ViT backbone (includes encoder and decoder) to jointly regress SMPLX body parameters and FLAME-consistent head parameters. A scale parameter s is introduced to account for head size variations, enabling robust modeling across both children and adults while maintaining efficient inference.
       </figcaption>
     </figure>
 
